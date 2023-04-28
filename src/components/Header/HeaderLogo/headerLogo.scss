@@ -1,0 +1,11 @@
+@import "./../../../styles/variables";
+
+.headerLogo {
+  &__img {
+    height: 30px;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      height: 50px;
+    }
+  }
+}

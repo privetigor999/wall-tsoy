@@ -1,0 +1,9 @@
+@import "./../../styles/variables";
+.mainpage {
+  height: 200vh;
+  margin-top: $header-height-mobile;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: $header-height-tablet;
+  }
+}
