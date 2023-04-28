@@ -1,7 +1,7 @@
 {
   "name": "wall-tsoy",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,14 +12,12 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-animated-burgers": "^1.2.8",
-    "react-burger-menu": "^3.0.9",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.0",
     "sass": "^1.62.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
-    "@types/react-burger-menu": "^2.8.3",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
