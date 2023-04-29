@@ -1,6 +1,7 @@
+import { Chat } from "../../components/Chat/Chat";
+
 import "./mainpage.scss";
 import wallPng from "./../../assets/images/photo/wall.png";
-import { Wall } from "../../components/Wall/Wall";
 
 export const MainPage: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ export const MainPage: React.FC = () => {
         посетить "настоящую" стену, которая находится на улице Арбат в городе
         Москве.
       </p>
-      <Wall />
+      <Chat />
     </div>
   );
 };

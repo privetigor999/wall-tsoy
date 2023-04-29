@@ -1,0 +1,60 @@
+@import "./../../../styles/_variables";
+
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: $message-block-height;
+  margin-bottom: 5px;
+
+  background-color: $boulder;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    height: 100%;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-left: 20px;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 120%;
+
+    text-align: center;
+    color: $white;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 240px;
+    height: 30px;
+
+    cursor: pointer;
+
+    background-color: $white;
+    border: none;
+    border-radius: 4px;
+    transition: transform 0.15s ease-in-out;
+
+    &:hover {
+      transform: scale(104%);
+    }
+
+    &-img {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+  }
+}
