@@ -1,9 +1,54 @@
-@import "./../../styles/variables";
+@import "./../../styles/_variables";
+@import "./../../styles/_mixins";
+
 .mainpage {
-  height: 200vh;
   margin-top: $header-height-mobile;
+  padding: $gap-page-mobile 0;
 
   @media screen and (min-width: $breakpoint-tablet) {
     margin-top: $header-height-tablet;
+  }
+
+  &__title {
+    @include gapBlock;
+    @include title;
+  }
+
+  &__wall {
+    width: 100%;
+    margin-bottom: $gap-page-mobile;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    @include text;
+
+    margin-bottom: $gap-page-mobile;
+
+    @media screen and (min-width: $breakpoint-tablet) {
+      width: 60%;
+      margin: 0 auto 30px;
+
+      text-align: center;
+    }
+
+    &-bg {
+      padding: 10px;
+
+      background-color: $boulder;
+      border-radius: 6px;
+      text-align: center;
+
+      @media screen and (min-width: $breakpoint-tablet) {
+        padding: 20px;
+      }
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        padding: 40px;
+      }
+    }
   }
 }

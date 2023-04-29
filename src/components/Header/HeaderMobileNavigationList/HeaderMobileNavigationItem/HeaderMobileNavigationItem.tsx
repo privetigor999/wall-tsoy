@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { CloseModalContext } from "../../Header";
 
 import "./navItem.scss";
 
@@ -12,9 +13,17 @@ export const HeaderMobileNavigationItem: React.FC<IProps> = ({
   title,
   route,
 }) => {
+  const { setModalIsActive } = React.useContext(CloseModalContext);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(route);
+    setModalIsActive(false);
+  };
+
   return (
-    <li className="navItem">
-      <Link to={route}>{title}</Link>
+    <li className="navItem" onClick={handleClick}>
+      <a>{title}</a>
     </li>
   );
 };

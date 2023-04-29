@@ -1,7 +1,52 @@
+@import "./_variables";
+
 @mixin transformScale {
   transition: transform 0.2s ease-in-out;
 
   &:hover {
     transform: scale(110%);
+  }
+}
+
+@mixin gapBlock {
+  margin-bottom: $gap-page-mobile;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-bottom: $gap-page-tablet;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    margin-bottom: $gap-page-desktop;
+  }
+}
+
+@mixin title {
+  font-size: 22px;
+  line-height: 120%;
+
+  color: $white;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 34px;
+  }
+}
+
+@mixin text {
+  font-family: $second;
+  line-height: 150%;
+  font-size: 12px;
+
+  color: $white;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    font-size: 14px;
+  }
+
+  @media screen and (min-width: $breakpoint-desktop) {
+    font-size: 18px;
   }
 }

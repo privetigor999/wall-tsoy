@@ -1,6 +1,6 @@
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
 
-export const useDisableBodyScroll = (open: ReactNode) => {
+export const useDisableBodyScroll = (open: boolean) => {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";

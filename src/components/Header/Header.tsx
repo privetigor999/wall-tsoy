@@ -1,13 +1,20 @@
 import React from "react";
-
 import { HamburgerThreeDYReverse } from "react-animated-burgers";
-import { ILink } from "../../types/types";
 import { HeaderLogo } from "./HeaderLogo/HeaderLogo";
 import { HeaderMobileNavigationList } from "./HeaderMobileNavigationList/HeaderMobileNavigationList";
 import { HeaderTabletNavigation } from "./HeaderTabletNavigation/HeaderTabletNavigation";
 import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
 
 import "./header.scss";
+import { ILink } from "../../types/types";
+
+interface ICloseModalContext {
+  setModalIsActive: (isActive: boolean) => void;
+}
+
+export const CloseModalContext = React.createContext<ICloseModalContext>({
+  setModalIsActive: () => {},
+});
 
 export const Header: React.FC = () => {
   const [isActive, setModalIsActive] = React.useState(false);
@@ -27,12 +34,34 @@ export const Header: React.FC = () => {
     },
   ];
 
+  React.useEffect(() => {
+    window.addEventListener("click", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("click", handleClickOutside);
+    };
+  });
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if ((event.target as HTMLElement).className === "mobileNavigation") {
+      setModalIsActive(false);
+    }
+  };
+
+  const closeModalContextValue = React.useMemo(() => {
+    return {
+      setModalIsActive,
+    };
+  }, [setModalIsActive]);
+
   return (
     <header className="header">
       <HeaderLogo />
 
       {isActive ? (
-        <HeaderMobileNavigationList links={links} />
+        <CloseModalContext.Provider value={closeModalContextValue}>
+          <HeaderMobileNavigationList links={links} />
+        </CloseModalContext.Provider>
       ) : (
         <HeaderTabletNavigation links={links} />
       )}

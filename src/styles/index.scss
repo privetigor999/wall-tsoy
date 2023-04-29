@@ -1,5 +1,5 @@
 @import "./_variables";
-@import "./mixins";
+@import "./_mixins";
 
 * {
   margin: 0;
@@ -12,4 +12,8 @@
 a {
   all: unset;
   cursor: pointer;
+}
+
+body {
+  background-color: $emperor;
 }

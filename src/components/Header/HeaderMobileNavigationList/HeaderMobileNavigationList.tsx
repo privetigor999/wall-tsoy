@@ -14,6 +14,7 @@ export const HeaderMobileNavigationList: React.FC<IHeaderProps> = ({
   const updatedLinks = [{ route: "/", title: "Стена Цоя" }, ...links];
 
   return (
+    // при изменении названия класса mobileNavigation не забудь поменять так же названия класса в файле Header.tsx в функции обработчике handleClickOutside
     <div className="mobileNavigation">
       <h1 className="mobileNavigation__title">Меню раздела</h1>
       <nav>

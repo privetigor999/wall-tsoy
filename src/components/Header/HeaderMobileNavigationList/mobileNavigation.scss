@@ -1,4 +1,4 @@
-@import "./../../../styles/variables";
+@import "./../../../styles/_variables";
 
 .mobileNavigation {
   z-index: 10;
@@ -15,7 +15,7 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  background-color: rgb(183, 183, 183);
+  background-color: $boulder;
 
   @media screen and (min-width: $breakpoint-tablet) {
     display: none;
@@ -31,6 +31,7 @@
     margin-bottom: $gap;
 
     text-align: center;
+    color: $white;
   }
 
   &__list {
@@ -40,5 +41,7 @@
     flex-direction: column;
 
     margin-bottom: 10px;
+
+    color: $white;
   }
 }
