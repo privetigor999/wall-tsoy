@@ -15,7 +15,12 @@ export const SignIn: React.FC = () => {
   const handleClick = () => {
     signInWithPopup(auth, provider).then((data) => {
       dispatch(
-        setUser({ name: data.user.displayName, photo: data.user.photoURL })
+        setUser({
+          name: data.user.displayName,
+          photo: data.user.photoURL,
+          email: data.user.email,
+          uid: data.user.uid,
+        })
       );
     });
   };
