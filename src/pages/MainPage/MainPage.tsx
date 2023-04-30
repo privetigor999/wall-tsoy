@@ -1,7 +1,7 @@
 import { Chat } from "../../components/Chat/Chat";
 
 import "./mainpage.scss";
-import wallPng from "./../../assets/images/photo/wall.png";
+import wallPng from "./../../assets/images/photo/wall-horizontal.png";
 
 export const MainPage: React.FC = () => {
   return (
