@@ -1,14 +1,13 @@
 import React from "react";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../../../../firebase";
+import { Message } from "./Message/Message";
 
 import "./messages.scss";
 import { IAuth } from "../../../types/types";
-import { Message } from "./Message/Message";
 
 export const Messages: React.FC = () => {
   const [messages, setMessages] = React.useState<IAuth[]>([]);
-  const messageRef = React.useRef<HTMLElement | null>(null);
 
   React.useEffect(() => {
     // get collection
@@ -37,10 +36,6 @@ export const Messages: React.FC = () => {
 
     return unsubscribe;
   }, []);
-
-  React.useEffect(() => {
-    messageRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
 
   return (
     <div className="messages">

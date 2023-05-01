@@ -21,6 +21,9 @@ export const Message: React.FC<IMessageProps> = ({
 }) => {
   const userid = useAppSelector((state) => state.auth.user?.uid);
   const messageRef = React.useRef<HTMLElement | null>(null);
+  const formattedDate = React.useMemo(() => formatTimestamp(date.seconds), [
+    date.seconds,
+  ]);
 
   const classForArticle = `message ${uid === userid && "message--self"}`;
 
@@ -34,11 +37,8 @@ export const Message: React.FC<IMessageProps> = ({
       <div className="message__block">
         <div className="message__outer">
           <p className="message__block-name">{name}</p>
-          <span className="message__block-date">
-            {formatTimestamp(date.seconds)}
-          </span>
+          <span className="message__block-date">{formattedDate}</span>
         </div>
-
         <p className="message__block-message">{message}</p>
       </div>
     </article>

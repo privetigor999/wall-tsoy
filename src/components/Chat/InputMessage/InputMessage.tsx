@@ -38,7 +38,6 @@ export const InputMessage: React.FC = () => {
 
   const onSubmit: SubmitHandler<IFormValue> = async (data) => {
     try {
-      setInputValue("");
       const uuid = uuidv4();
       await setDoc(doc(db, "wall", uuid), {
         ...user,
@@ -46,6 +45,7 @@ export const InputMessage: React.FC = () => {
         uuid,
         date: Timestamp.now(),
       });
+      setInputValue("");
     } catch (error) {
       console.log(error);
     }

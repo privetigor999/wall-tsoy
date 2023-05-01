@@ -6,7 +6,7 @@
   justify-content: center;
 
   width: 100%;
-  height: $message-block-height;
+  min-height: $message-block-height;
   margin-bottom: 5px;
 
   background-color: $boulder;
@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    flex-shrink: 0;
 
     height: 100%;
 
