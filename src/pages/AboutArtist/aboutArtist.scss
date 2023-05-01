@@ -1,0 +1,16 @@
+@import "./../../styles/variables";
+@import "./../../styles/mixins";
+
+.aboutArtist {
+  $gap: 20px;
+  margin-top: calc($header-height-mobile + $gap);
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    margin-top: calc($header-height-tablet + $gap);
+  }
+
+  &__title {
+    @include gapBlock;
+    @include title;
+  }
+}
