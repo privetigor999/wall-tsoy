@@ -55,6 +55,19 @@
     }
   }
 
+  &__error {
+    font-size: 10px;
+
+    position: absolute;
+    top: -13px;
+
+    padding: 0 10px;
+
+    background-color: $persimmon;
+    border-radius: 4px;
+    color: $white;
+  }
+
   &__button {
     position: absolute;
     top: 50%;

@@ -47,6 +47,16 @@
 
       color: $boulder;
     }
+
+    &-message {
+      @media screen and (min-width: $breakpoint-tablet) {
+        max-width: 340px;
+      }
+
+      @media screen and (min-width: $breakpoint-desktop) {
+        max-width: 600px;
+      }
+    }
   }
 
   &--self {
