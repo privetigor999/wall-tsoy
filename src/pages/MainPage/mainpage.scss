@@ -16,6 +16,7 @@
 
   &__wall {
     width: 100%;
+    height: auto;
     margin-bottom: $gap-page-mobile;
 
     @media screen and (min-width: $breakpoint-tablet) {

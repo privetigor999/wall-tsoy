@@ -16,23 +16,20 @@ export const CloseModalContext = React.createContext<ICloseModalContext>({
   setModalIsActive: () => {},
 });
 
+const links: ILink[] = [
+  {
+    title: "О музыканте",
+    route: "/about",
+  },
+  {
+    title: "Фотографии",
+    route: "/photo",
+  },
+];
+
 export const Header: React.FC = () => {
   const [isActive, setModalIsActive] = React.useState(false);
   useDisableBodyScroll(isActive);
-
-  const toggleButton = () =>
-    setModalIsActive((prevState: boolean) => !prevState);
-
-  const links: ILink[] = [
-    {
-      title: "О музыканте",
-      route: "/about",
-    },
-    {
-      title: "Фотографии",
-      route: "/photo",
-    },
-  ];
 
   React.useEffect(() => {
     window.addEventListener("click", handleClickOutside);
@@ -42,17 +39,20 @@ export const Header: React.FC = () => {
     };
   });
 
-  const handleClickOutside = (event: MouseEvent) => {
-    if ((event.target as HTMLElement).className === "mobileNavigation") {
-      setModalIsActive(false);
-    }
-  };
-
   const closeModalContextValue = React.useMemo(() => {
     return {
       setModalIsActive,
     };
   }, [setModalIsActive]);
+
+  const toggleButton = () =>
+    setModalIsActive((prevState: boolean) => !prevState);
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if ((event.target as HTMLElement).className === "mobileNavigation") {
+      setModalIsActive(false);
+    }
+  };
 
   return (
     <header className="header">

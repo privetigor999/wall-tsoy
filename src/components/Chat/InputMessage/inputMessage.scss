@@ -6,7 +6,7 @@
   justify-content: center;
 
   width: 100%;
-  height: $message-block-height;
+  min-height: $message-block-height;
   margin-bottom: 5px;
 
   border-top: 1px solid $emperor;
