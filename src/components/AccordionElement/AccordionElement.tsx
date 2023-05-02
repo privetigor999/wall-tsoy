@@ -3,7 +3,7 @@ import { AccordionItem } from "@szhsin/react-accordion";
 import { useInView } from "react-intersection-observer";
 
 import "./accordion.scss";
-import arrowSvg from "./../../../assets/images/logos/arrow-top.svg";
+import arrowSvg from "./../../assets/images/logos/arrow-top.svg";
 
 interface IElementProps {
   header: string;

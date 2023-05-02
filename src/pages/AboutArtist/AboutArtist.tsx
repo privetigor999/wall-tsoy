@@ -1,6 +1,6 @@
 import React from "react";
 import { Accordion } from "@szhsin/react-accordion";
-import { AccordionElement } from "./AccordionElement/AccordionElement";
+import { AccordionElement } from "../../components/AccordionElement/AccordionElement";
 
 import { accordionItems } from "../../utils/data/accordionItems";
 import "./aboutArtist.scss";

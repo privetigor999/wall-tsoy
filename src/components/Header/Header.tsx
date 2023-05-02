@@ -56,16 +56,15 @@ export const Header: React.FC = () => {
 
   return (
     <header className="header">
-      <HeaderLogo />
+      <CloseModalContext.Provider value={closeModalContextValue}>
+        <HeaderLogo />
 
-      {isActive ? (
-        <CloseModalContext.Provider value={closeModalContextValue}>
+        {isActive ? (
           <HeaderMobileNavigationList links={links} />
-        </CloseModalContext.Provider>
-      ) : (
-        <HeaderTabletNavigation links={links} />
-      )}
-
+        ) : (
+          <HeaderTabletNavigation links={links} />
+        )}
+      </CloseModalContext.Provider>
       <div className="header__hamburger">
         <HamburgerThreeDYReverse
           buttonWidth={20}
