@@ -15,3 +15,14 @@ export interface IAuth {
     seconds: number;
   };
 }
+
+export interface ISwiperData {
+  title: string;
+  photos: IPhoto[];
+}
+
+export interface IPhoto {
+  description?: string;
+  photo: string;
+  background?: string;
+}

@@ -41,7 +41,7 @@ export const SignIn: React.FC = () => {
       <div>{View}</div>
       <div className="signIn__block">
         <p className="signIn__text">
-          Чтобы оставить запись на стене, нужно авторизоваться
+          Чтобы оставить запись, нужно авторизоваться
         </p>
         <button className="signIn__button" onClick={handleClick}>
           <p>Войти через Google</p>
