@@ -29,6 +29,10 @@ export const Message: React.FC<IMessageProps> = ({
 
   React.useEffect(() => {
     messageRef.current?.scrollIntoView({ behavior: "smooth" });
+
+    return () => {
+      window.scrollTo(0, 0);
+    };
   }, [message]);
 
   return (

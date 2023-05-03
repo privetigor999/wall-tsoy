@@ -4,6 +4,7 @@ import { HeaderLogo } from "./HeaderLogo/HeaderLogo";
 import { HeaderMobileNavigationList } from "./HeaderMobileNavigationList/HeaderMobileNavigationList";
 import { HeaderTabletNavigation } from "./HeaderTabletNavigation/HeaderTabletNavigation";
 import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
+import { routes } from "../../utils/data/router";
 
 import "./header.scss";
 import { ILink } from "../../types/types";
@@ -19,11 +20,11 @@ export const CloseModalContext = React.createContext<ICloseModalContext>({
 const links: ILink[] = [
   {
     title: "О музыканте",
-    route: "/about",
+    route: routes.about,
   },
   {
     title: "Фотографии",
-    route: "/photo",
+    route: routes.photo,
   },
 ];
 
@@ -55,22 +56,24 @@ export const Header: React.FC = () => {
   };
 
   return (
-    <header className="header">
-      <CloseModalContext.Provider value={closeModalContextValue}>
-        <HeaderLogo />
+    <header className="headerWrapper">
+      <div className="header">
+        <CloseModalContext.Provider value={closeModalContextValue}>
+          <HeaderLogo />
 
-        {isActive ? (
-          <HeaderMobileNavigationList links={links} />
-        ) : (
-          <HeaderTabletNavigation links={links} />
-        )}
-      </CloseModalContext.Provider>
-      <div className="header__hamburger">
-        <HamburgerThreeDYReverse
-          buttonWidth={20}
-          barColor="white"
-          {...{ isActive, toggleButton }}
-        />
+          {isActive ? (
+            <HeaderMobileNavigationList links={links} />
+          ) : (
+            <HeaderTabletNavigation links={links} />
+          )}
+        </CloseModalContext.Provider>
+        <div className="header__hamburger">
+          <HamburgerThreeDYReverse
+            buttonWidth={20}
+            barColor="white"
+            {...{ isActive, toggleButton }}
+          />
+        </div>
       </div>
     </header>
   );
