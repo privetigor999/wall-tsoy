@@ -1,12 +1,20 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper";
+import { useTranslation } from "react-i18next";
 
 import "./swiperList.scss";
 import "swiper/css";
-import { ISwiperData } from "../../types/types";
+import { IPhoto } from "../../types/types";
 
-export const SwiperList: React.FC<ISwiperData> = ({ title, photos }) => {
+interface ISwiperProps {
+  photos: IPhoto[];
+  order: number;
+}
+
+export const SwiperList: React.FC<ISwiperProps> = ({ photos, order }) => {
+  const { t } = useTranslation();
+
   const checkClassForSpan = React.useCallback(
     (bg: string) => bg === "black" && "swiper-slide-description--black",
     []
@@ -28,13 +36,17 @@ export const SwiperList: React.FC<ISwiperData> = ({ title, photos }) => {
                 className={` swiper-slide-description ${photo?.background &&
                   checkClassForSpan(photo.background)}`}
               >
-                {photo.description}
+                {t(
+                  `photopage.swipers.swiper${order}.photos.description${i + 1}`
+                )}
               </span>
             )}
           </SwiperSlide>
         ))}
       </Swiper>
-      <p className="swiperWrapper__title">{title}</p>
+      <p className="swiperWrapper__title">
+        {t(`photopage.swipers.swiper${order}.title`)}
+      </p>
     </div>
   );
 };

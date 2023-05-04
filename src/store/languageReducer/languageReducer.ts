@@ -12,11 +12,11 @@ const languageReducer = createSlice({
   name: "language",
   initialState,
   reducers: {
-    setCurrentState: (state, action) => {
+    setCurrentLanguage: (state, action) => {
       state.currentLanguage = action.payload;
     },
   },
 });
 
-export const { setCurrentState } = languageReducer.actions;
+export const { setCurrentLanguage } = languageReducer.actions;
 export default languageReducer.reducer;

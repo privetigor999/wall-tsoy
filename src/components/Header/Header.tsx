@@ -5,10 +5,11 @@ import { HeaderMobileNavigationList } from "./HeaderMobileNavigationList/HeaderM
 import { HeaderTabletNavigation } from "./HeaderTabletNavigation/HeaderTabletNavigation";
 import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
 import { routes } from "../../utils/data/router";
+import { ChangerLanguageDesktop } from "./ChangerLanguageDesktop/ChangerLanguageDesktop";
+import { useTranslation } from "react-i18next";
 
 import "./header.scss";
 import { ILink } from "../../types/types";
-import { ChangerLanguage } from "./ChangerLanguage/ChangerLanguage";
 
 interface ICloseModalContext {
   setModalIsActive: (isActive: boolean) => void;
@@ -18,18 +19,20 @@ export const CloseModalContext = React.createContext<ICloseModalContext>({
   setModalIsActive: () => {},
 });
 
-const links: ILink[] = [
-  {
-    title: "О музыканте",
-    route: routes.about,
-  },
-  {
-    title: "Фотографии",
-    route: routes.photo,
-  },
-];
-
 export const Header: React.FC = () => {
+  const { t } = useTranslation();
+
+  const links: ILink[] = [
+    {
+      title: t("links.about"),
+      route: routes.about,
+    },
+    {
+      title: t("links.photo"),
+      route: routes.photo,
+    },
+  ];
+
   const [isActive, setModalIsActive] = React.useState(false);
   useDisableBodyScroll(isActive);
 
@@ -68,7 +71,7 @@ export const Header: React.FC = () => {
               <HeaderTabletNavigation links={links} />
             )}
           </CloseModalContext.Provider>
-          <ChangerLanguage />
+          <ChangerLanguageDesktop />
         </div>
         <div className="header__hamburger">
           <HamburgerThreeDYReverse

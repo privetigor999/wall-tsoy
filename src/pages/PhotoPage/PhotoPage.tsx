@@ -13,7 +13,7 @@ export const PhotoPage: React.FC = () => {
       <h1 className="photopage__title">{t("photopage.title")}</h1>
       <div className="photopage__swipers">
         {swiperItems.map((swiperItem, i) => (
-          <SwiperList {...swiperItem} key={i} />
+          <SwiperList {...swiperItem} order={i + 1} key={i} />
         ))}
       </div>
     </div>
