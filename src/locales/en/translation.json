@@ -1,0 +1,38 @@
+{
+  "mainpage": {
+    "title": "This page is dedicated to Soviet rock musician Viktor Tsoy",
+    "description": "'Tsoi Wall' is the wall of house No. 37 on Arbat, facing Krivoarbatsky Lane in Moscow, which fans of Viktor Tsoi's work have covered with inscriptions 'Cinema', 'Tsoi is alive', quotes from songs and declarations of love to the musician. It is a monument symbol of the Arbat and a landmark of Moscow.",
+    "infoblock": "Our service offers to leave an inscription on the virtual wall of Viktor Tsoi. This will help fans and fans of the musician who do not have the opportunity to visit the 'real' wall, which is located on Arbat Street in Moscow.",
+    "chat": {
+      "signin": {
+        "info": "To leave a message, you need to log in",
+        "button": "Log in via Google"
+      },
+      "input": {
+        "from": "Message from:",
+        "placeholder": "Leave an entry..."
+      },
+      "alert": {
+        "success": {
+          "title": "The message is already on the wall!",
+          "text": "Your message:"
+        },
+        "warning": {
+          "title": "An error has occurred. Try sending a message later"
+        },
+        "error": {
+          "text": "Try to write something"
+        }
+      }
+    }
+  },
+  "photopage": {
+    "title": "Page with photos"
+  },
+  "validation": {
+    "message": {
+      "required": "The message should not be empty",
+      "max": "Maximum of 300 characters"
+    }
+  }
+}

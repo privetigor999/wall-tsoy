@@ -1,8 +1,10 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import authReducer from "./authReducer/authReducer";
+import languageReducer from "./languageReducer/languageReducer";
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  language: languageReducer,
 });
 
 export const store = configureStore({

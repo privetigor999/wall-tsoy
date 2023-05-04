@@ -26,3 +26,8 @@ export interface IPhoto {
   photo: string;
   background?: string;
 }
+
+export interface ILanguage {
+  lang: string;
+  flag: string;
+}

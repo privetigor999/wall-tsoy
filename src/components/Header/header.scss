@@ -49,6 +49,12 @@
     padding-right: 100px;
   }
 
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   &__hamburger {
     @media screen and (min-width: $breakpoint-tablet) {
       display: none;
