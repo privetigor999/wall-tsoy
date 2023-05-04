@@ -3,12 +3,12 @@ import { ChangerLanguagesList } from "./ChangerLanguagesList/ChangerLanguagesLis
 import { languages } from "../../../utils/data/languages";
 import i18next from "i18next";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux-hooks";
-import { setCurrentState } from "../../../store/languageReducer/languageReducer";
+import { setCurrentLanguage } from "../../../store/languageReducer/languageReducer";
 
 import "./changerLanguage.scss";
 import worldSvg from "./../../../assets/images/logos/world.svg";
 
-export const ChangerLanguage: React.FC = React.memo(() => {
+export const ChangerLanguageDesktop: React.FC = React.memo(() => {
   const [isShowList, setIsShowList] = React.useState(false);
   const dispatch = useAppDispatch();
   const currentLanguage = useAppSelector(
@@ -17,7 +17,7 @@ export const ChangerLanguage: React.FC = React.memo(() => {
 
   const handleChangeLang = (lang: string): void => {
     i18next.changeLanguage(lang);
-    dispatch(setCurrentState(lang));
+    dispatch(setCurrentLanguage(lang));
   };
 
   const findedLang = React.useCallback(() => {

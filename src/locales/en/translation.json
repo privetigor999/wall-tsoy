@@ -27,12 +27,85 @@
     }
   },
   "photopage": {
-    "title": "Page with photos"
+    "title": "Page with photos",
+    "swipers": {
+      "swiper1": {
+        "title": "Youth",
+        "photos": {
+          "description1": "2 years",
+          "description2": "8 years old",
+          "description3": "11 years"
+        }
+      },
+
+      "swiper2": {
+        "title": "Painting",
+        "photos": {}
+      },
+      "swiper3": {
+        "title": "Concerts",
+        "photos": {
+          "description1": null,
+          "description2": "1988 year",
+          "description3": null
+        }
+      },
+      "swiper4": {
+        "title": "Filmography",
+        "photos": {
+          "description1": "The film 'Assa'",
+          "description2": "The film 'Igla'"
+        }
+      },
+      "swiper5": {
+        "title": "Discography",
+        "photos": {
+          "description1": "45",
+          "description2": "46",
+          "description3": "Blood type",
+          "description4": "Black album"
+        }
+      }
+    }
+  },
+  "aboutpage": {
+    "title": "About the musician",
+    "accordions": {
+      "accordion1": {
+        "header": "Biography",
+        "content": "Viktor Robertovich Tsoi (June 21, 1962 — August 15, 1990) was a Soviet rock musician, songwriter, poet, artist and actor of Korean—Russian origin. The founder and leader of the rock group 'Cinema', which was part of the Leningrad Rock Club and originally had the name 'Garin and Hyperboloids'; before that, he was a member of the groups 'Palata No. 6' and 'Automatic Satisfactors'. One of the most influential and famous Soviet rock musicians; Tsoi himself wrote all the lyrics and performed all the songs at the concerts of the Kino group, which disbanded after his death."
+      },
+      "accordion2": {
+        "header": "Analysis of creativity",
+        "content": "Russian Russian artist Viktor Tsoi's creative personality is predetermined by the fact that he was the bearer of two conceptual worldviews — Korean (eastern) and Russian; journalists quite often note that the musician's lyrics 'feel the Russian soul', allowing us to conclude that the Russian worldview is predominant in his mind. Nevertheless, it is more correct in this case to talk about symbiosis — the harmonious interaction of these two pictures of the world in his mind; the Russian picture of the world is superimposed on the Eastern one in a special way. Although Tsoi wrote almost all his texts in Russian, the very form of his verse bears the features of Oriental style and philosophy."
+      },
+      "accordion3": {
+        "header": "Painting",
+        "content": "Viktor Tsoi is an artist by education; according to his mother, he showed the makings of a talented painter in kindergarten. As noted in newspaper publications, 'most of the works of the legendary leader of the Kino group have not been seen by anyone except relatives'. At the same time, 'Tsoi wrote on canvas more often than in a music notebook'. Art historians believe that he is 'the owner of an original artistic gift', 'consonant' with the avant-gardists, noting in particular that the Leningrad musician painted on oilcloths. Tsoi was one of the most important representatives of the Leningrad underground — the association 'New Artists'. Ten of his works were exhibited at the exhibition of the association back in 1988 in New York (USA)."
+      },
+      "accordion4": {
+        "header": "Filmography",
+        "content": "In 1986, Viktor Tsoi took part in the filming of the film 'Ya-ha!'. After that, Alexey Uchitel invited the musician to participate in his film 'Rock'. In a key episode of the film, the rock star says that he does not know if anyone needs his work. Actually, Choi himself was not sure that someone needed his songs. At the end of 1986, director Sergei Solovyov had an idea: to show the chaos of time on the screen, in which both the old and the new were mixed. As a result, the picture 'Assa' appeared, in which Viktor Tsoi, who had become a cult personality by that time, could not help but take part. In the film 'Igla' by Rashid Nugmanov, the musician played the main role of Moro. This is a picture about drugs, youth problems, about a rock and roll hero. In the 'Igla' Choi did not have to reincarnate, because he played himself..."
+      },
+      "accordion5": {
+        "header": "Music",
+        "content": "The first album of the group 'Kino' was released in 1982. In total, the band has released 8 albums during its existence; the last one was released after the death of the band leader. The composition of the group, which consisted only of Viktor Tsoi and Alexey Rybin during the recording of the first album, changed several times and finally formed by 1985; in addition to Tsoi, Yuri Kasparyan, Georgy Guryanov and Igor Tikhomirov joined it."
+      }
+    }
   },
   "validation": {
     "message": {
       "required": "The message should not be empty",
       "max": "Maximum of 300 characters"
     }
+  },
+  "links": {
+    "menu": "Section Menu",
+    "main": "Tsoi Wall",
+    "about": "About the musician",
+    "photo": "Photos"
+  },
+  "utils": {
+    "choose_language": "Select a language"
   }
 }

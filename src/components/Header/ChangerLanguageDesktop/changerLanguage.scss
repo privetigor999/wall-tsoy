@@ -1,6 +1,9 @@
+@import "./../../../styles/variables";
+
 .changerLanguage {
   position: relative;
 
+  display: none;
   width: 30px;
   height: 30px;
   margin-left: 20px;
@@ -9,6 +12,10 @@
 
   background-color: transparent;
   border: none;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    display: block;
+  }
 
   &__currentLang {
     position: absolute;
@@ -19,5 +26,6 @@
     height: 20px;
 
     border: 0.5px solid #000000;
+    border-radius: 50%;
   }
 }

@@ -1,23 +1,18 @@
 import React from "react";
 import { AccordionItem } from "@szhsin/react-accordion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 
 import "./accordion.scss";
 import arrowSvg from "./../../assets/images/logos/arrow-top.svg";
 
 interface IElementProps {
-  header: string;
-  content: string;
   index: number;
   img?: string;
 }
 
-export const AccordionElement: React.FC<IElementProps> = ({
-  header,
-  content,
-  img,
-  index,
-}) => {
+export const AccordionElement: React.FC<IElementProps> = ({ img, index }) => {
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
@@ -27,7 +22,7 @@ export const AccordionElement: React.FC<IElementProps> = ({
     <AccordionItem
       header={
         <p className="accordion__title">
-          {header}
+          {t(`aboutpage.accordions.accordion${index + 1}.header`)}
           <a className="accordion__toggleButton">
             <img src={arrowSvg} className="accordion__arrow" alt="arrow" />
           </a>
@@ -36,7 +31,9 @@ export const AccordionElement: React.FC<IElementProps> = ({
       initialEntered={!index}
     >
       <div ref={ref}>
-        <p className="accordion__content">{content}</p>
+        <p className="accordion__content">
+          {t(`aboutpage.accordions.accordion${index + 1}.content`)}
+        </p>
         {inView && <img className="accordion__photo" src={img} alt="img" />}
       </div>
     </AccordionItem>
