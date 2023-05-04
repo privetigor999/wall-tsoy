@@ -8,6 +8,7 @@ import { routes } from "../../utils/data/router";
 
 import "./header.scss";
 import { ILink } from "../../types/types";
+import { ChangerLanguage } from "./ChangerLanguage/ChangerLanguage";
 
 interface ICloseModalContext {
   setModalIsActive: (isActive: boolean) => void;
@@ -58,15 +59,17 @@ export const Header: React.FC = () => {
   return (
     <header className="headerWrapper">
       <div className="header">
-        <CloseModalContext.Provider value={closeModalContextValue}>
-          <HeaderLogo />
-
-          {isActive ? (
-            <HeaderMobileNavigationList links={links} />
-          ) : (
-            <HeaderTabletNavigation links={links} />
-          )}
-        </CloseModalContext.Provider>
+        <HeaderLogo />
+        <div className="header__right">
+          <CloseModalContext.Provider value={closeModalContextValue}>
+            {isActive ? (
+              <HeaderMobileNavigationList links={links} />
+            ) : (
+              <HeaderTabletNavigation links={links} />
+            )}
+          </CloseModalContext.Provider>
+          <ChangerLanguage />
+        </div>
         <div className="header__hamburger">
           <HamburgerThreeDYReverse
             buttonWidth={20}

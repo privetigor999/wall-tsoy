@@ -6,6 +6,7 @@ import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { db } from "./../../../../firebase";
 import { v4 as uuidv4 } from "uuid";
 import { smallAalert, errorAlert } from "../../../utils/sweetalert";
+import { useTranslation } from "react-i18next";
 
 import "./inputMessage.scss";
 import sendSvg from "./../../../assets/images/logos/send.svg";
@@ -17,6 +18,7 @@ interface IFormValue {
 
 export const InputMessage: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user!);
+  const { t } = useTranslation();
 
   const {
     register,
@@ -41,15 +43,15 @@ export const InputMessage: React.FC = () => {
 
       smallAalert.fire({
         icon: "success",
-        title: "Сообщение уже на стене!",
-        text: `Ваша запись: ${getValues().message}`,
+        title: `${t("mainpage.chat.alert.success.title")}`,
+        text: `${t("mainpage.chat.alert.success.text")} ${getValues().message}`,
       });
 
       reset();
     } catch (error) {
       errorAlert.fire({
         icon: "warning",
-        title: "Произошла ошибка. Попробуйте отправвить сообщение позже",
+        title: `${t("mainpage.chat.alert.warning.title")}`,
       });
     }
   };
@@ -58,7 +60,7 @@ export const InputMessage: React.FC = () => {
     smallAalert.fire({
       icon: "error",
       title: errors?.message?.message,
-      text: "Попробуйте что-то написать",
+      text: `${t("mainpage.chat.alert.error.text")}`,
     });
   };
 
@@ -69,20 +71,19 @@ export const InputMessage: React.FC = () => {
         onSubmit={handleSubmit(onSubmit, onError)}
         noValidate
       >
-        <p className="inputMessage__name">Сообщение от: {user.name}</p>
+        <p className="inputMessage__name">
+          {t("mainpage.chat.input.from")} {user.name}
+        </p>
         <div className="input">
           <input
             className="input__input"
             type="text"
-            placeholder="Оставьте запись..."
+            placeholder={t("mainpage.chat.input.placeholder") as string}
             {...register("message")}
           />
           <button type="submit" className="input__button">
             <img className="input__button-img" src={sendSvg} alt="send" />
           </button>
-          {errors?.message && (
-            <span className="input__error">{errors.message.message}</span>
-          )}
         </div>
       </form>
     </div>

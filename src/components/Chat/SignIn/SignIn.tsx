@@ -8,9 +8,11 @@ import { useLottie } from "lottie-react";
 import "./signIn.scss";
 import googleSvg from "./../../../assets/images/logos/google.svg";
 import attentionLottieJson from "./../../../assets/lottie/attenction.json";
+import { useTranslation } from "react-i18next";
 
 export const SignIn: React.FC = () => {
   const dispatch = useAppDispatch();
+  const { t } = useTranslation();
 
   const handleClick = () => {
     signInWithPopup(auth, provider).then((data) => {
@@ -40,11 +42,9 @@ export const SignIn: React.FC = () => {
     <div className="signIn">
       <div>{View}</div>
       <div className="signIn__block">
-        <p className="signIn__text">
-          Чтобы оставить запись, нужно авторизоваться
-        </p>
+        <p className="signIn__text">{t("mainpage.chat.signin.info")}</p>
         <button className="signIn__button" onClick={handleClick}>
-          <p>Войти через Google</p>
+          <p>{t("mainpage.chat.signin.button")}</p>
           <img className="signIn__button-img" src={googleSvg} alt="google" />
         </button>
       </div>

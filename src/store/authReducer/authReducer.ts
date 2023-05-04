@@ -2,11 +2,11 @@ import { createSlice } from "@reduxjs/toolkit";
 
 import { IAuth } from "../../types/types";
 
-interface IStateProps {
+interface IState {
   user: null | IAuth;
 }
 
-const initialState: IStateProps = {
+const initialState: IState = {
   user: null,
 };
 

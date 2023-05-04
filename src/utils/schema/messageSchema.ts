@@ -1,8 +1,11 @@
+import i18next from "i18next";
 import * as yup from "yup";
+
+const t = i18next.t.bind(i18next);
 
 export const messageSchema = yup.object().shape({
   message: yup
     .string()
-    .required("Сообщение не должно быть пустым")
-    .max(300, "Максимум 300 символов"),
+    .required(t("validation.message.required") as string)
+    .max(300, t("validation.message.max") as string),
 });

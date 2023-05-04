@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./components/App/App";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import "./i18next";
 
 import "./styles/index.scss";
 
