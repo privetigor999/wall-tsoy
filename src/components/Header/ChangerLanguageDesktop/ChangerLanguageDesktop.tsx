@@ -2,27 +2,23 @@ import React from "react";
 import { ChangerLanguagesList } from "./ChangerLanguagesList/ChangerLanguagesList";
 import { languages } from "../../../utils/data/languages";
 import i18next from "i18next";
-import { useAppDispatch, useAppSelector } from "../../../hooks/redux-hooks";
-import { setCurrentLanguage } from "../../../store/languageReducer/languageReducer";
 
 import "./changerLanguage.scss";
 import worldSvg from "./../../../assets/images/logos/world.svg";
 
 export const ChangerLanguageDesktop: React.FC = React.memo(() => {
   const [isShowList, setIsShowList] = React.useState(false);
-  const dispatch = useAppDispatch();
-  const currentLanguage = useAppSelector(
-    (state) => state.language.currentLanguage
-  );
 
   const handleChangeLang = (lang: string): void => {
     i18next.changeLanguage(lang);
-    dispatch(setCurrentLanguage(lang));
+    localStorage.setItem("language", lang);
   };
 
+  const storedLanguage = localStorage.getItem("language") || "ru";
+
   const findedLang = React.useCallback(() => {
-    return languages.find((lang) => lang.lang === currentLanguage);
-  }, [currentLanguage]);
+    return languages.find((lang) => lang.lang === storedLanguage);
+  }, [storedLanguage]);
 
   return (
     <button
