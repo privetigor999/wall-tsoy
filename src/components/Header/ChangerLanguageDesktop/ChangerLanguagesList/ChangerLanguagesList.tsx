@@ -1,6 +1,4 @@
-import React from "react";
 import { ILanguage } from "../../../../types/types";
-
 import "./changerLanguagesList.scss";
 
 interface IListProps {
@@ -8,10 +6,10 @@ interface IListProps {
   handleChangeLang: (lang: string) => void;
 }
 
-export const ChangerLanguagesList: React.FC<IListProps> = ({
+export const ChangerLanguagesList = ({
   languages,
   handleChangeLang,
-}) => {
+}: IListProps) => {
   return (
     <ul className="changerLanguagesList">
       {languages.map((lang) => (

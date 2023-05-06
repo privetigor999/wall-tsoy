@@ -19,7 +19,7 @@ export const CloseModalContext = React.createContext<ICloseModalContext>({
   setModalIsActive: () => {},
 });
 
-export const Header: React.FC = () => {
+export const Header = () => {
   const { t } = useTranslation();
 
   const links: ILink[] = [

@@ -92,6 +92,10 @@
       }
     }
   },
+  "notfound": {
+    "title": "Страница не найдена",
+    "buttonText": "На главную"
+  },
   "validation": {
     "message": {
       "required": "Сообщение не должно быть пустым",

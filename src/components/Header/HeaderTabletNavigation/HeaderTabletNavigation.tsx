@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 import "./navigation.scss";
@@ -8,7 +7,7 @@ interface IHeaderProps {
   links: ILink[];
 }
 
-export const HeaderTabletNavigation: React.FC<IHeaderProps> = ({ links }) => {
+export const HeaderTabletNavigation = ({ links }: IHeaderProps) => {
   return (
     <nav className="navigation">
       <ul className="navigation__list">

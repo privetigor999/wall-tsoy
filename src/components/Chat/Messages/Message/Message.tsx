@@ -1,5 +1,5 @@
 import React from "react";
-import { useAppSelector } from "../../../../hooks/redux-hooks";
+import { useAppSelector } from "../../../../hooks/useAppSelector";
 import { formatTimestamp } from "../../../../utils/formatTimestamp";
 
 import "./message.scss";
@@ -12,13 +12,7 @@ interface IMessageProps {
   date: { nanoseconds: number; seconds: number };
 }
 
-export const Message: React.FC<IMessageProps> = ({
-  photo,
-  name,
-  message,
-  date,
-  uid,
-}) => {
+export const Message = ({ photo, name, message, date, uid }: IMessageProps) => {
   const userid = useAppSelector((state) => state.auth.user?.uid);
   const messageRef = React.useRef<HTMLElement | null>(null);
   const formattedDate = React.useMemo(() => formatTimestamp(date.seconds), [

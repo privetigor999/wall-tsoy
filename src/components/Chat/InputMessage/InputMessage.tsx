@@ -1,7 +1,6 @@
-import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { useAppSelector } from "../../../hooks/redux-hooks";
+import { useAppSelector } from "../../../hooks/useAppSelector";
 import { doc, setDoc, Timestamp } from "firebase/firestore";
 import { db } from "./../../../../firebase";
 import { v4 as uuidv4 } from "uuid";
@@ -16,7 +15,7 @@ interface IFormValue {
   message: string;
 }
 
-export const InputMessage: React.FC = () => {
+export const InputMessage = () => {
   const user = useAppSelector((state) => state.auth.user!);
   const { t } = useTranslation();
 

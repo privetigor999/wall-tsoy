@@ -1,4 +1,3 @@
-import React from "react";
 import { Accordion } from "@szhsin/react-accordion";
 import { AccordionElement } from "../../components/AccordionElement/AccordionElement";
 import { useTranslation } from "react-i18next";
@@ -6,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { accordionItems } from "../../utils/data/accordionItems";
 import "./aboutArtist.scss";
 
-export const AboutArtist: React.FC = () => {
+export const AboutArtist = () => {
   const { t } = useTranslation();
   return (
     <div className="aboutArtist">

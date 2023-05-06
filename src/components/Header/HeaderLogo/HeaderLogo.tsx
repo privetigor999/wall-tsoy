@@ -5,7 +5,7 @@ import { CloseModalContext } from "../Header";
 import headerLogo from "./../../../assets/images/logos/headerLogo.png";
 import "./headerLogo.scss";
 
-export const HeaderLogo: React.FC = React.memo(() => {
+export const HeaderLogo = React.memo(() => {
   const { setModalIsActive } = React.useContext(CloseModalContext);
 
   const handleClickLogo = () => {

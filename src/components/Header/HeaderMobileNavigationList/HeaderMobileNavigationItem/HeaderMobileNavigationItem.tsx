@@ -9,10 +9,7 @@ interface IProps {
   title: string;
 }
 
-export const HeaderMobileNavigationItem: React.FC<IProps> = ({
-  title,
-  route,
-}) => {
+export const HeaderMobileNavigationItem = ({ title, route }: IProps) => {
   const { setModalIsActive } = React.useContext(CloseModalContext);
   const navigate = useNavigate();
 

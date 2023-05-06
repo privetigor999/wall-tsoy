@@ -1,11 +1,10 @@
-import React from "react";
 import i18next from "i18next";
 import { languages } from "../../../../utils/data/languages";
 import { useTranslation } from "react-i18next";
 
 import "./changerLanguageMobile.scss";
 
-export const ChangerLanguageMobile: React.FC = () => {
+export const ChangerLanguageMobile = () => {
   const { t } = useTranslation();
   const storedLanguage = localStorage.getItem("language") || "ru";
 

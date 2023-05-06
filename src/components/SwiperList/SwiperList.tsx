@@ -12,7 +12,7 @@ interface ISwiperProps {
   order: number;
 }
 
-export const SwiperList: React.FC<ISwiperProps> = ({ photos, order }) => {
+export const SwiperList = ({ photos, order }: ISwiperProps) => {
   const { t } = useTranslation();
 
   const checkClassForSpan = React.useCallback(
