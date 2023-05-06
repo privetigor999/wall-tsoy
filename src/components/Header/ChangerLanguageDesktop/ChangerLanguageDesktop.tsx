@@ -6,7 +6,7 @@ import i18next from "i18next";
 import "./changerLanguage.scss";
 import worldSvg from "./../../../assets/images/logos/world.svg";
 
-export const ChangerLanguageDesktop: React.FC = React.memo(() => {
+export const ChangerLanguageDesktop = React.memo(() => {
   const [isShowList, setIsShowList] = React.useState(false);
 
   const handleChangeLang = (lang: string): void => {

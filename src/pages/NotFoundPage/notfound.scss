@@ -1,0 +1,47 @@
+@import "./../../styles/variables";
+@import "./../../styles/mixins";
+
+.notfound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: calc(100vh - $header-height-mobile);
+  width: 100%;
+  margin-top: $header-height-mobile;
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    min-height: calc(100vh - $header-height-tablet);
+    margin-top: $header-height-tablet;
+  }
+
+  &__title {
+    @include title;
+
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    @include text;
+
+    width: 200px;
+    height: 50px;
+
+    cursor: pointer;
+    transition: transform 0.15s ease-in-out;
+
+    background-color: $mine-shaft;
+    color: $white;
+    border: none;
+    border-radius: 6px;
+
+    &:hover {
+      transform: scale(105%);
+    }
+
+    &:active {
+      background-color: darken($mine-shaft, $amount: 10%);
+    }
+  }
+}

@@ -6,7 +6,7 @@ import { Message } from "./Message/Message";
 import "./messages.scss";
 import { IAuth } from "../../../types/types";
 
-export const Messages: React.FC = () => {
+export const Messages = () => {
   const [messages, setMessages] = React.useState<IAuth[]>([]);
 
   React.useEffect(() => {

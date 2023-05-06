@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./mainpage.scss";
 import wallPng from "./../../assets/images/photo/wall-horizontal.png";
 
-export const MainPage: React.FC = () => {
+export const MainPage = () => {
   const { t } = useTranslation();
 
   return (

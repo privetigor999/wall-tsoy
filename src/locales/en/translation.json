@@ -93,6 +93,10 @@
       }
     }
   },
+  "notfound": {
+    "title": "Page not found",
+    "buttonText": "To home"
+  },
   "validation": {
     "message": {
       "required": "The message should not be empty",

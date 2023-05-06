@@ -1,7 +1,6 @@
-import React from "react";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "./../../../../firebase";
-import { useAppDispatch } from "../../../hooks/redux-hooks";
+import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { setUser } from "../../../store/authReducer/authReducer";
 import { useLottie } from "lottie-react";
 
@@ -10,7 +9,7 @@ import googleSvg from "./../../../assets/images/logos/google.svg";
 import attentionLottieJson from "./../../../assets/lottie/attenction.json";
 import { useTranslation } from "react-i18next";
 
-export const SignIn: React.FC = () => {
+export const SignIn = () => {
   const dispatch = useAppDispatch();
   const { t } = useTranslation();
 

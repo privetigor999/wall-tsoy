@@ -1,11 +1,10 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 import { SwiperList } from "../../components/SwiperList/SwiperList";
 import { swiperItems } from "../../utils/data/swiperItems";
 
 import "./photopage.scss";
 
-export const PhotoPage: React.FC = () => {
+export const PhotoPage = () => {
   const { t } = useTranslation();
 
   return (

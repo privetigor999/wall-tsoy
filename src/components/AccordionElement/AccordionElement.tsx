@@ -1,4 +1,3 @@
-import React from "react";
 import { AccordionItem } from "@szhsin/react-accordion";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
@@ -11,7 +10,7 @@ interface IElementProps {
   img?: string;
 }
 
-export const AccordionElement: React.FC<IElementProps> = ({ img, index }) => {
+export const AccordionElement = ({ img, index }: IElementProps) => {
   const { t } = useTranslation();
   const { ref, inView } = useInView({
     threshold: 0,

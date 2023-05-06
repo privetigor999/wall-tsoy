@@ -1,19 +1,16 @@
-import React from "react";
 import { HeaderMobileNavigationItem } from "./HeaderMobileNavigationItem/HeaderMobileNavigationItem";
 import { routes } from "../../../utils/data/router";
 import { useTranslation } from "react-i18next";
+import { ChangerLanguageMobile } from "./ChangerLanguageMobile/ChangerLanguageMobile";
 
 import { ILink } from "../../../types/types";
 import "./mobileNavigation.scss";
-import { ChangerLanguageMobile } from "./ChangerLanguageMobile/ChangerLanguageMobile";
 
 interface IHeaderProps {
   links: ILink[];
 }
 
-export const HeaderMobileNavigationList: React.FC<IHeaderProps> = ({
-  links,
-}) => {
+export const HeaderMobileNavigationList = ({ links }: IHeaderProps) => {
   const { t } = useTranslation();
   const updatedLinks = [
     { route: routes.main, title: t("links.main") },
