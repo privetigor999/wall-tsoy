@@ -1,4 +1,4 @@
-# The wall of the Soviet musician Viktor Tsoi (Realtime wall)
+# The wall of the Soviet musician Viktor Tsoi (Realtime chat (wall))
 
 ## About
 
