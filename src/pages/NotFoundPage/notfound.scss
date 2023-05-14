@@ -31,8 +31,8 @@
     cursor: pointer;
     transition: transform 0.15s ease-in-out;
 
-    background-color: $mine-shaft;
-    color: $white;
+    background-color: $color-mine-shaft;
+    color: $color-white;
     border: none;
     border-radius: 6px;
 
@@ -41,7 +41,7 @@
     }
 
     &:active {
-      background-color: darken($mine-shaft, $amount: 10%);
+      background-color: darken($color-mine-shaft, $amount: 10%);
     }
   }
 }

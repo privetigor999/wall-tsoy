@@ -13,7 +13,7 @@
   &__item {
     @include transformScale;
 
-    color: $white;
+    color: $color-white;
 
     & + & {
       margin-left: 20px;

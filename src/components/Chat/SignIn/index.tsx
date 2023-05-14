@@ -1,12 +1,12 @@
 import { signInWithPopup } from "firebase/auth";
-import { auth, provider } from "./../../../../firebase";
+import { auth, provider } from "../../../../firebase";
 import { useAppDispatch } from "../../../hooks/useAppDispatch";
 import { setUser } from "../../../store/authReducer/authReducer";
 import { useLottie } from "lottie-react";
 
 import "./signIn.scss";
 import googleSvg from "./../../../assets/images/logos/google.svg";
-import attentionLottieJson from "./../../../assets/lottie/attenction.json";
+import attentionLottieJson from "../../../assets/lottie/attenction.json";
 import { useTranslation } from "react-i18next";
 
 export const SignIn = () => {

@@ -1,4 +1,4 @@
-import { Chat } from "../../components/Chat/Chat";
+import { Chat } from "../../components/Chat";
 import { useTranslation } from "react-i18next";
 
 import "./mainpage.scss";

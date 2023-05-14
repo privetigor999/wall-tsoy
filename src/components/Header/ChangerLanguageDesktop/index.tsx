@@ -1,5 +1,5 @@
 import React from "react";
-import { ChangerLanguagesList } from "./ChangerLanguagesList/ChangerLanguagesList";
+import { ChangerLanguagesList } from "./ChangerLanguagesList";
 import { languages } from "../../../utils/data/languages";
 import i18next from "i18next";
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { HamburgerThreeDYReverse } from "react-animated-burgers";
-import { HeaderLogo } from "./HeaderLogo/HeaderLogo";
-import { HeaderMobileNavigationList } from "./HeaderMobileNavigationList/HeaderMobileNavigationList";
-import { HeaderTabletNavigation } from "./HeaderTabletNavigation/HeaderTabletNavigation";
+import { HeaderLogo } from "./HeaderLogo";
+import { HeaderMobileNavigationList } from "./HeaderMobileNavigationList";
+import { HeaderTabletNavigation } from "./HeaderTabletNavigation";
 import { useDisableBodyScroll } from "../../hooks/useDisableBodyScroll";
 import { routes } from "../../utils/data/router";
-import { ChangerLanguageDesktop } from "./ChangerLanguageDesktop/ChangerLanguageDesktop";
+import { ChangerLanguageDesktop } from "./ChangerLanguageDesktop";
 import { useTranslation } from "react-i18next";
 
 import "./header.scss";

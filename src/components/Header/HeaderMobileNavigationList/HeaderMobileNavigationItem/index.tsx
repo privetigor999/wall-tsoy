@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { CloseModalContext } from "../../Header";
+import { CloseModalContext } from "../..";
 
 import "./navItem.scss";
 
