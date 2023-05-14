@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards } from "swiper";
 import { useTranslation } from "react-i18next";
@@ -15,10 +14,8 @@ interface ISwiperProps {
 export const SwiperList = ({ photos, order }: ISwiperProps) => {
   const { t } = useTranslation();
 
-  const checkClassForSpan = React.useCallback(
-    (bg: string) => bg === "black" && "swiper-slide-description--black",
-    []
-  );
+  const checkClassForSpan = (bg: string) =>
+    bg === "black" && "swiper-slide-description--black";
 
   return (
     <div className="swiperWrapper">

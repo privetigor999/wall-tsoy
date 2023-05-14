@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import { AboutArtist } from "../pages/AboutArtist/AboutArtist";
-import { MainPage } from "../pages/MainPage/MainPage";
-import { NotFoundPage } from "../pages/NotFoundPage/NotFoundPage";
-import { PhotoPage } from "../pages/PhotoPage/PhotoPage";
+import { AboutArtist } from "../pages/AboutArtist";
+import { MainPage } from "../pages/MainPage";
+import { NotFoundPage } from "../pages/NotFoundPage";
+import { PhotoPage } from "../pages/PhotoPage";
 import { routes } from "../utils/data/router";
 
 export const Router = () => {

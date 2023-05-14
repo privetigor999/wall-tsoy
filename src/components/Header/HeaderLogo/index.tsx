@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { CloseModalContext } from "../Header";
+import { CloseModalContext } from "..";
 
 import headerLogo from "./../../../assets/images/logos/headerLogo.png";
 import "./headerLogo.scss";

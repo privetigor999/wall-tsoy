@@ -20,14 +20,14 @@
     width: 80px;
     height: 40px;
 
-    background-color: $white;
+    background-color: $color-white;
 
     &:hover {
-      background-color: $alto;
+      background-color: $color-alto;
     }
 
     & + & {
-      border-top: 1px solid $emperor;
+      border-top: 1px solid $color-emperor;
     }
   }
 

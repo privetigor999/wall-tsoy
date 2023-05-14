@@ -1,5 +1,5 @@
 import { Accordion } from "@szhsin/react-accordion";
-import { AccordionElement } from "../../components/AccordionElement/AccordionElement";
+import { AccordionElement } from "../../components/AccordionElement";
 import { useTranslation } from "react-i18next";
 
 import { accordionItems } from "../../utils/data/accordionItems";

@@ -2,7 +2,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAppSelector } from "../../../hooks/useAppSelector";
 import { doc, setDoc, Timestamp } from "firebase/firestore";
-import { db } from "./../../../../firebase";
+import { db } from "../../../../firebase";
 import { v4 as uuidv4 } from "uuid";
 import { smallAalert, errorAlert } from "../../../utils/sweetalert";
 import { useTranslation } from "react-i18next";

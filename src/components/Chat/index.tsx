@@ -1,6 +1,6 @@
-import { Messages } from "./Messages/Messages";
-import { InputMessage } from "./InputMessage/InputMessage";
-import { SignIn } from "./SignIn/SignIn";
+import { Messages } from "./Messages";
+import { InputMessage } from "./InputMessage";
+import { SignIn } from "./SignIn";
 import { useAppSelector } from "../../hooks/useAppSelector";
 
 import "./chat.scss";

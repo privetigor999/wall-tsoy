@@ -1,7 +1,7 @@
-import { HeaderMobileNavigationItem } from "./HeaderMobileNavigationItem/HeaderMobileNavigationItem";
+import { HeaderMobileNavigationItem } from "./HeaderMobileNavigationItem";
 import { routes } from "../../../utils/data/router";
 import { useTranslation } from "react-i18next";
-import { ChangerLanguageMobile } from "./ChangerLanguageMobile/ChangerLanguageMobile";
+import { ChangerLanguageMobile } from "./ChangerLanguageMobile";
 
 import { ILink } from "../../../types/types";
 import "./mobileNavigation.scss";

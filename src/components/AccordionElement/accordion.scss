@@ -62,7 +62,7 @@
   &__content {
     @include text;
 
-    color: $mine-shaft;
+    color: $color-mine-shaft;
 
     @media screen and (min-width: $breakpoint-desktop) {
       padding: 8px 20px;
@@ -94,7 +94,7 @@
   width: 100%;
 
   border-radius: 4px;
-  border: 1px solid $boulder;
+  border: 1px solid $color-boulder;
 
   margin-bottom: 20px;
 
@@ -112,7 +112,7 @@
     width: 100%;
 
     & + & {
-      border-top: 1px solid $boulder;
+      border-top: 1px solid $color-boulder;
     }
 
     &-btn {
@@ -121,7 +121,7 @@
 
       cursor: pointer;
 
-      background-color: $white;
+      background-color: $color-white;
       border: none;
 
       @media screen and (min-width: $breakpoint-tablet) {
@@ -137,14 +137,14 @@
   & .szh-accordion__item--expanded {
     .szh-accordion__item {
       &-btn {
-        background-color: $alto;
+        background-color: $color-alto;
 
-        color: $mine-shaft;
+        color: $color-mine-shaft;
       }
 
       &-panel {
         font-size: 14px;
-        background-color: $white;
+        background-color: $color-white;
 
         padding: 10px 20px;
       }
@@ -153,7 +153,7 @@
     .accordion__arrow {
       transform: rotate(-180deg);
 
-      fill: $white;
+      fill: $color-white;
     }
   }
 }

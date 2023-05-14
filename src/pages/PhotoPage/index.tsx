@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { SwiperList } from "../../components/SwiperList/SwiperList";
+import { SwiperList } from "../../components/SwiperList";
 import { swiperItems } from "../../utils/data/swiperItems";
 
 import "./photopage.scss";

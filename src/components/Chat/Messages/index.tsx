@@ -1,7 +1,7 @@
 import React from "react";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../../../../firebase";
-import { Message } from "./Message/Message";
+import { Message } from "./Message";
 
 import "./messages.scss";
 import { IAuth } from "../../../types/types";

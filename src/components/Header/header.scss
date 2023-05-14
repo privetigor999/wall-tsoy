@@ -18,7 +18,7 @@
   margin-right: auto;
 
   background-color: $header-bg;
-  border-bottom: 1px solid $white;
+  border-bottom: 1px solid $color-white;
 
   @media screen and (min-width: $breakpoint-tablet) {
     height: $header-height-tablet;
